@@ -35,7 +35,7 @@ function RootRedirect() {
   return <Navigate to="/coach-dashboard" replace />;
 }
 
-const LazyScreen_coach_dashboard = lazy(() => import('./presentation/views/coach-dashboard.view'));
+const LazyScreen_coach_dashboard = lazy(() => import('./presentation/containers/coach-dashboard.container'));
 function Guarded_coach_dashboard() {
   return (
     <AuthGuard loadingComponent={<LoadingFallback />} fallback={<Navigate to="/login" replace />}>
